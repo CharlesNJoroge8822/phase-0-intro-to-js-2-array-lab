@@ -1,54 +1,67 @@
 // Write your solution here!
+//const of cats... function you add cat then call back the function
 const cats = ["Milo", "Otis", "Garfield"]
 
 function add_cat(cat){
-    cats.push(name);
+    cats.pop(name);
 }
-// // index.js
+//index js
 // let cats = ["Milo", "Otis", "Garfield"];
 
-// 1. Destructively appends a cat to the end of the cats array
+// Append a cat to the end of the cats array
+// function destructivelyAppendCat(cat_name){
+//     cats.unshift(cat_name);
+//Error found and rectified.............
 function destructivelyAppendCat(name) {
     cats.push(name);
 }
 
-// 2. Destructively prepends a cat to the beginning of the cats array
+// Destructively prepends a cat to the beginning of the cats array
 function destructivelyPrependCat(name) {
+    //add items in the beginning of an array. using unshift
     cats.unshift(name);
 }
 
-// 3. Destructively removes the last cat from the cats array
+// Destructively removes the last cat from the cats array
 function destructivelyRemoveLastCat() {
-    cats.pop();
+    //remove items at the end of an array using the pop..
+    //we'll add cats.pop.. when we input the names of the cat pop will add names later if we need to add
+    cats.pop();//POP array
 }
 
-// 4. Destructively removes the first cat from the cats array
+//  Destructively removes the first cat from the cats array
 function destructivelyRemoveFirstCat() {
     cats.shift();
 }
 
-// 5. Appends a cat to the cats array and returns a new array
+//  Appends a cat to the cats array and returns a new array
 function appendCat(name) {
+    //use return to call a function..
     return [...cats, name];
 }
 
-// 6. Prepends a cat to the cats array and returns a new array
+// Prepends a cat to the cats array and returns a new array
 function prependCat(name) {
+    //use return to call a function..
     return [name, ...cats];
 }
 
-// 7. Removes the last cat in the cats array and returns a new array
+// Removes the last cat in the cats array and returns a new array
 function removeLastCat() {
+    //slice the names will slice out the last two since its a negative index..
+    //to print the first two use a positive integer to do so
     return cats.slice(0, -1);
 }
 
-// 8. Removes the first cat from the cats array and returns a new array
+// Removes the first cat from the cats array and returns a new array
 function removeFirstCat() {
+    //t'will slice out the name that will be on the first index..
     return cats.slice(1);
 }
 
 // Export the functions and the cats array for testing
 module.exports = {
+    //Use module export function to transfer data and test...
     cats,
     destructivelyAppendCat,
     destructivelyPrependCat,
